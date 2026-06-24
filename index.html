@@ -1,123 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SRS COLLECTION SHERGARH</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SRS Collection - Shergarh's Fashion Destination: Premium men's shirts, jeans, and t-shirts.">
+  <title>SRS COLLECTION SHERGARH</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<div id="welcomeScreen">
-
-  <img
-    src="logo.gif"
-    class="welcome-logo"
-  >
-
-  <h1>
-    WELCOME TO
-    <span>SRS COLLECTION</span>
-    SHERGARH
-  </h1>
-
-  <p>
-    Fashion For Every Style
-  </p>
-
-  <button
-    class="explore-btn"
-    onclick="enterWebsite()"
-  >
-    LET'S EXPLORE →
-  </button>
-
-</div>
 <body>
 
-<header>
+  <div id="welcomeScreen" class="welcome-screen" role="dialog" aria-modal="true">
+    <img src="logo.gif" class="welcome-logo" alt="SRS Collection logo">
+    <h1>
+      WELCOME TO
+      <span>SRS COLLECTION</span>
+      SHERGARH
+    </h1>
+    <p>Fashion For Every Style</p>
+    <button class="explore-btn" type="button" onclick="enterWebsite()">LET'S EXPLORE →</button>
+  </div>
+
+  <header>
     <h1>SRS COLLECTION</h1>
     <p>Shergarh's Fashion Destination</p>
-</header>
+  </header>
 
-<nav>
+  <nav aria-label="Main navigation">
     <a href="#">Home</a>
     <a href="#products">Products</a>
     <a href="contact.html">Contact</a>
-</nav>
+  </nav>
 
-<section class="hero">
-    <h2>Latest Men's Fashion</h2>
-    <p>Premium Shirts, Jeans, T-Shirts & More</p>
-</section>
+  <main>
+    <section class="hero">
+      <h2>Latest Men's Fashion</h2>
+      <p>Premium Shirts, Jeans, T-Shirts &amp; More</p>
+    </section>
 
-<section id="products">
-    <h2>Featured Products</h2>
+    <section id="products">
+      <h2>Featured Products</h2>
 
-    <div class="product-container">
+      <div class="product-container">
 
         <div class="product">
-            <img src="images/shirt1.jpg">
-            <h3>Casual Shirt</h3>
-            <p>₹799</p>
-            <button onclick="addToCart('Casual Shirt')">
-                Add to Cart
-            </button>
+          <img src="images/shirt1.jpg" alt="Casual shirt">
+          <h3>Casual Shirt</h3>
+          <p>₹799</p>
+          <button type="button" onclick="addToCart('Casual Shirt', 799)">Add to Cart</button>
         </div>
 
         <div class="product">
-            <img src="images/jeans1.jpg">
-            <h3>Blue Jeans</h3>
-            <p>₹1299</p>
-            <button onclick="addToCart('Blue Jeans')">
-                Add to Cart
-            </button>
+          <img src="images/jeans1.jpg" alt="Blue jeans">
+          <h3>Blue Jeans</h3>
+          <p>₹1299</p>
+          <button type="button" onclick="addToCart('Blue Jeans', 1299)">Add to Cart</button>
         </div>
 
-    </div>
+      </div>
 
-</section>
+    </section>
 
-<section class="cart">
-    <h2>Cart</h2>
-    <ul id="cart-items"></ul>
+    <aside class="cart">
+      <h2>Cart</h2>
+      <ul id="cart-items" aria-live="polite"></ul>
+      <div class="cart-actions">
+        <button type="button" id="clear-cart" onclick="clearCart()">Clear Cart</button>
+        <button type="button" id="order-btn" onclick="orderOnWhatsApp()">Order on WhatsApp</button>
+      </div>
+    </aside>
 
-    <a
-    href="https://wa.me/917060507500"
-    class="order-btn">
-    Order on WhatsApp
-    </a>
+    <section class="shop-card">
+      <h2>SRS COLLECTION</h2>
+      <p>Premium Men's Fashion Store</p>
+      <div class="owner">👤 Mahesh Nishad</div>
+      <div class="contact">📞 7060507500</div>
+      <div class="address">📍 Main Market, Shergarh, Chatta, Mathura</div>
+    </section>
 
-</section>
+  </main>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
-<div class="shop-card">
-
-  <h2>SRS COLLECTION</h2>
-
-  <p>
-    Premium Men's Fashion Store
-  </p>
-
-  <div class="owner">
-
-    👤 Mahesh Nishad
-
-  </div>
-
-  <div class="contact">
-
-    📞 7060507500
-
-  </div>
-
-  <div class="address">
-
-    📍 Main Market,
-    Shergarh, Chatta,
-    Mathura
-
-  </div>
-
-</div>
